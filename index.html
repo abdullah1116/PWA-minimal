@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="manifest.json" />
-    <title>Document</title>
-  </head>
-  <body>
-    hellllllllllllowwwwwwwwwwwwwwwwwww PWA!
-  </body>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-        navigator.serviceWorker
-          .register('/serviceWorker.js')
-          .then((res) => console.log('service worker registered'))
-          .catch((err) => console.log('service worker not registered', err));
-      });
-    }
-  </script>
+
+<head>
+  <title>Dev'sCoffee</title>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- links and styles -->
+  <link rel="manifest" href="/manifest.json" />
+  <!-- IOS support -->
+  <link rel="apple-touch-icon" href="/assets/images/icon/icon-96x96.png" />
+  <meta name="apple-mobile-web-app-status-bar" content="#DB4938" />
+  <meta name="theme-color" content="#DB4938" />
+  <meta name="description" content="Dev's coffee" />
+</head>
+
+<body>
+<img src="/assets/images/logo.png">
+  <h1>Why Do Programmers Love Coffee?</h1>
+  <p>
+    I’m a Python programmer and I love drinking coffee (and sometimes tea).
+    One of my friends asked me the other day “Why do you programmers fetishize drinking coffee?”.
+  </p>
+
+  </article>
+</body>
+<script>
+  // service worker
+  if (navigator['serviceWorker']) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker
+        .register('/sw.js', { scope: '.' })
+        .then((res) => console.log('sw: registered'))
+        .catch((err) => console.log('sw: not registered', err));
+    });
+  }
+</script>
+<script src="assets/js/index.js"></script>
 </html>
