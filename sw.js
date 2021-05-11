@@ -1,5 +1,6 @@
 const staticCacheName = 'sw-cache';
 const assets = [
+  '/',
   'index.html',
   'favicon.ico',
   'manifest.json',

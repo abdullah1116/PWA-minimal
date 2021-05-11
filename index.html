@@ -1,40 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Dev'sCoffee</title>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- links and styles -->
+    <link rel="manifest" href="manifest.json" />
+    <!-- IOS support -->
+    <link rel="apple-touch-icon" href="assets/images/icon/icon-96x96.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <meta name="apple-mobile-web-app-status-bar" content="#DB4938" />
+    <meta name="theme-color" content="#DB4938" />
+    <meta name="description" content="Dev's coffee" />
+  </head>
 
-<head>
-  <title>Dev'sCoffee</title>
-  <meta charset="UTF-8" />
-  <meta name="theme-color" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- links and styles -->
-  <link rel="manifest" href="manifest.json" />
-  <!-- IOS support -->
-  <link rel="apple-touch-icon" href="assets/images/icon/icon-96x96.png" />
-  <meta name="apple-mobile-web-app-status-bar" content="#DB4938" />
-  <meta name="theme-color" content="#DB4938" />
-  <meta name="description" content="Dev's coffee" />
-</head>
+  <body>
+    <div>
+      <div
+        style="
+          background-image: url(assets/images/logo.png);
+          width: 100%;
+          height: 250px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 250px;
+          background-color: #fff4e8;
+        "
+      ></div>
+      <h1>Why Do Programmers Love Coffee?</h1>
+      <p>
+        I’m a Python programmer and I love drinking coffee (and sometimes tea).
+        One of my friends asked me the other day “Why do you programmers
+        fetishize drinking coffee?”.
+      </p>
+    </div>
+  </body>
 
-<body>
-<img src="assets/images/logo.png">
-  <h1>Why Do Programmers Love Coffee?</h1>
-  <p>
-    I’m a Python programmer and I love drinking coffee (and sometimes tea).
-    One of my friends asked me the other day “Why do you programmers fetishize drinking coffee?”.
-  </p>
-
-  </article>
-</body>
-<script>
-  // service worker
-  if (navigator['serviceWorker']) {
-    window.addEventListener('load', function () {
-      navigator.serviceWorker
-        .register('/sw.js', { scope: '.' })
-        .then((res) => console.log('sw: registered'))
-        .catch((err) => console.log('sw: not registered', err));
-    });
-  }
-</script>
-<script src="assets/js/index.js"></script>
+  <script>
+    // service worker
+    if (navigator['serviceWorker']) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker
+          .register('/sw.js', { scope: '.' })
+          .then((res) => console.log('sw: registered'))
+          .catch((err) => console.log('sw: not registered', err));
+      });
+    }
+  </script>
+  <script src="assets/js/index.js"></script>
 </html>
