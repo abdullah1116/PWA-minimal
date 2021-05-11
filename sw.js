@@ -1,4 +1,4 @@
-const staticCacheName = 'sw-cache';
+const staticCacheName = 'sw-cache-1';
 const assets = [
   '/',
   'index.html',
@@ -15,7 +15,6 @@ self.addEventListener('install', (evt) => {
     caches.open(staticCacheName).then((cache) => {
       console.log('sw: caching');
       cache.addAll(assets);
-      cache.match;
     })
   );
 });
@@ -23,9 +22,15 @@ self.addEventListener('install', (evt) => {
 self.addEventListener('activate', (evt) => {
   console.log('sw: activated', evt);
   evt.waitUntil(
-    caches.open(staticCacheName).then((cache) => {
-      cache.addAll(assets);
-    })
+    caches
+      .keys()
+      .then((keys) =>
+        Promise.all(
+          keys
+            .filter((key) => key !== staticCacheName)
+            .map((key) => caches.delete(key))
+        )
+      )
   );
 });
 

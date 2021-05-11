@@ -1,1 +1,1 @@
-console.log('index.js loaded');
+siteVersion.innerHTML = '1';

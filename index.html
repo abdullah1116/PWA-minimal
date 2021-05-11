@@ -4,15 +4,15 @@
     <title>Dev'sCoffee</title>
     <meta charset="UTF-8" />
     <meta name="theme-color" />
+    <meta name="theme-color" content="#DB4938" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <meta name="description" content="Dev's coffee" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- links and styles -->
     <link rel="manifest" href="manifest.json" />
     <!-- IOS support -->
     <link rel="apple-touch-icon" href="assets/images/icon/icon-96x96.png" />
-    <link rel="shortcut icon" href="favicon.ico" />
     <meta name="apple-mobile-web-app-status-bar" content="#DB4938" />
-    <meta name="theme-color" content="#DB4938" />
-    <meta name="description" content="Dev's coffee" />
   </head>
 
   <body>
@@ -34,11 +34,12 @@
         One of my friends asked me the other day “Why do you programmers
         fetishize drinking coffee?”.
       </p>
+      <p>Siteversion: <span id="siteVersion"></span></p>
     </div>
   </body>
 
   <script>
-    // service worker
+    // Service worker
     if (navigator['serviceWorker']) {
       window.addEventListener('load', function () {
         navigator.serviceWorker
