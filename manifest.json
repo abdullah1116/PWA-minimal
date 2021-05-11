@@ -10,27 +10,27 @@
   "description": "Dev's coffee",
   "icons": [
     {
-      "src": "/assets/images/icon/icon-96x96.png",
+      "src": "assets/images/icon/icon-96x96.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "/assets/images/icon/icon-192x192.png",
+      "src": "assets/images/icon/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/assets/images/icon/icon-256x256.png",
+      "src": "assets/images/icon/icon-256x256.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "/assets/images/icon/icon-384x384.png",
+      "src": "assets/images/icon/icon-384x384.png",
       "sizes": "384x384",
       "type": "image/png"
     },
     {
-      "src": "/assets/images/icon/icon-512x512.png",
+      "src": "assets/images/icon/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
